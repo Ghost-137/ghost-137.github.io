@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--From the head to the header, everything is similar on every page-->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YouTube Videos List</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/baseStyle.css" />
+  <link rel="stylesheet" href="css/videoStyle.css" />
 </head>
 <body>
   <header>
-    <h1>Folklore & History</h1>
+    <div class="logo-title">
+      <img src="images/viasat-history-seeklogo.png" alt="Folklore & History Logo" class="logo">
+      <h1>Folklore & History</h1>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="articles.html">Articles</a></li>
+        <li><a href="article_list.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="about.html">About us</a></li>
+        
       </ul>
     </nav>
   </header>
-
+<!--From here every page has different content-->
   <main>
     <section class="hero">
       <ul class="iframe-list">
@@ -43,5 +49,8 @@
       </ul>
     </section>
   </main>
+  <footer>
+    <p>&copy; 2025 Folklore & History</p>
+  </footer>
 </body>
 </html>

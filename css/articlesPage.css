@@ -1,0 +1,51 @@
+.featured {
+    padding: 40px 20px;
+    background-color: #fdf6e3;;
+  }
+  
+  .articles-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    background-color: #fdf6e3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #article-heading {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    object-fit: cover;
+  }
+  
+  #article-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+  }
+
+  #article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 30px 0;
+    empty-cells: show;
+}
+#article-content table td,
+#article-content table th {
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    text-align: center; 
+}
+
+  

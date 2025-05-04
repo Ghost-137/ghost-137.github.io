@@ -1,0 +1,127 @@
+/* This is the default style of every pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fdf6e3;
+  color: #3b3a30;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #5a4a42;
+}
+
+a {
+  color: #8c7b75;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5a4a42;
+}
+
+
+/* HEADER & NAVIGATION */
+
+header {
+  background-color: #eee8d5;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-links a {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: #5a4a42;
+  color: #f8f8f8;
+  padding: 2.5rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+
+/* RESPONSIVE ADJUSTMENTS */
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--From the head to the header, everything is similar on every page-->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articles - Folklore & History</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/baseStyle.css"> <!--Each page follows a similar style-->
+  <link rel="stylesheet" href="css/articlesPage.css">  <!--This one is for styling of article page class ids-->
 </head>
+
 <body>
   <header>
-    <h1>Folklore & History</h1>
+    <div class="logo-title">
+      <img src="images/viasat-history-seeklogo.png" alt="Folklore & History Logo" class="logo">
+      <h1>Folklore & History</h1>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="articles.html">Articles</a></li>
+        <li><a href="article_list.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="about.html">About us</a></li>
+       
       </ul>
     </nav>
   </header>
 
+  <!--From here every page has different content-->
+
   <main>
     <section class="featured">
-      <h2>Featured Articles</h2>
       <div class="articles-container" id="articles-container">
-        <!-- Articles will be inserted here by JavaScript -->
+        <h1 id="article-heading"></h1>
+        <img id="article-image" src="" alt="" class="article-image">
+        <div id="article-content"></div>
       </div>
     </section>
   </main>
 
+<!--The Footer is similar in every pages-->
+
   <footer>
     <p>&copy; 2025 Folklore & History</p>
-    <p>Follow us on 
-      <a href="#">Instagram</a>, 
+    <p>Follow us on
+      <a href="#">Instagram</a>,
       <a href="#">Facebook</a>
     </p>
   </footer>
 
   <script src="js/articles-data.js"></script>
-  <script src="js/script.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = parseInt(urlParams.get('id'));
+    const article = articles[id];
+    console.log(id);
+    console.log(article.title);
+    
+
+    if (article) {
+      document.getElementById("article-heading").textContent = article.title;
+      document.getElementById("article-image").src = article.image;
+      document.getElementById("article-image").alt = article.alt;
+      document.getElementById("article-content").innerHTML = article.content;
+    } else {
+      document.getElementById("article-content").innerHTML = "<p>Article not found.</p>";
+    }
+  </script>
 </body>
+
 </html>

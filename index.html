@@ -1,60 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--From the head to the header, everything is similar on every page-->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Folklore & History</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/baseStyle.css" /> <!--Every page has this default style-->
+  <link rel="stylesheet" href="css/homeStyle.css" /> <!--Unique style for home page-->
 </head>
+
+
 <body>
   <header>
-    <h1>Folklore & History</h1>
+    <div class="logo-title">
+      <img src="images/viasat-history-seeklogo.png" alt="Folklore & History Logo" class="logo">
+      <h1>Folklore & History</h1>
+    </div>
     <nav>
+    <!--Navigation Links-->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="articles.html">Articles</a></li>
+        <li><a href="article_list.html">Articles</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="about.html">About us</a></li>
       </ul>
     </nav>
   </header>
 
+  <!--From here every page has different content-->
+
   <main>
-    <section class="hero">
+    <section class="hero">  <!--for the banner-->
       <h2>Welcome to the world of Folklore and History</h2>
       <p>Explore rich stories from the past</p>
+    </section>
+
+    <section class="own-section-paragraph">
+      <div class="own-div-paragraph">
+        <h1>Importance Of History</h1>
+        <p class="own-paragraph">
+          History is very important because it helps us learn about the past and how it shapes our present and future. By studying history, we understand how societies, cultures, and governments evolved over time. It teaches us about the mistakes and achievements of people before us, so we can avoid repeating errors and build a better world. History also gives us a sense of identity, showing where we come from and how our traditions and values were formed. Without history, we would lose valuable knowledge and lessons that guide us in life. In short, history helps us grow wiser and make smarter decisions for tomorrow.
+
+        </p>
+      </div>
     </section>
 
     <section class="featured">
       <h3>Featured Articles</h3>
       <div class="articles-container">
+        <!-- Featured Articles card -->
         <article class="card">
           <img src="images/ancient_ruins.jpg" alt="Ancient Ruins">
           <div class="card-content">
             <h4>The Lost City</h4>
             <p>A deep dive into the mysterious ancient ruins...</p>
-            <a href="#" class="read-more">Read More</a>
+            <a href="articles.html?id=0" class="read-more">Read More</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/warone.jpg" alt="Soldiers in trenches">
+          <div class="card-content">
+            <h4>World War I</h4>
+            <p>The Great War that reshaped the world</p>
+            <a href="articles.html?id=12" class="read-more">Read More</a>
           </div>
         </article>
         <article class="card">
-          <img src="images/helsinki.jpg" alt="Folklore Image">
+          <img src="images/worldwar.jpg" alt="Soldiers storming Normandy">
           <div class="card-content">
-            <h4>European Folklore Legends</h4>
-            <p>Legends that have shaped cultures for centuries...</p>
-            <a href="#" class="read-more">Read More</a>
+            <h4>World War II</h4>
+            <p>The global conflict that shaped the modern world</p>
+            <a href="articles.html?id=13" class="read-more">Read More</a>
           </div>
         </article>
+        <article class="card">
+          <img src="images/helsinki.jpg" alt="Finnish landscape">
+          <div class="card-content">
+            <h4>The History of Finland</h4>
+            <p>From ancient tribes to modern nationhood</p>
+            <a href="articles.html?id=14" class="read-more">Read More</a>
+          </div>
+        </article>
+
+
+        <article class="card">
+          <img src="images/tutenkham.jpg" alt="Golden mask of Tutankhamun">
+          <div class="card-content">
+            <h4>The Curse of Tutankhamun</h4>
+            <p>The deadly legend that followed the discovery of the boy king's tomb...</p>
+            <a href="articles.html?id=2" class="read-more">Read More</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/labyrinth.jpg" alt="Ancient Knossos palace ruins">
+          <div class="card-content">
+            <h4>The Minotaur's Labyrinth: Truth Behind the Myth</h4>
+            <p>The terrifying half-man, half-bull creature that demanded human sacrifice...</p>
+            <a href="articles.html?id=3" class="read-more">Read More</a>
+          </div>
+        </article>
+
+
       </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Folklore & History</p>
-    <p>Follow us on 
-      <a href="#">Instagram</a>, 
-      <a href="#">Facebook</a>
-    </p>
   </footer>
 </body>
+
 </html>
